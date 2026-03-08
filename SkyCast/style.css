@@ -1,8 +1,8 @@
-/* General Body */
+
 body {
     margin: 0;
     min-height: 100vh;
-    /* use min-height so content can grow on small screens */
+    /* min-height so content can grow on small screens */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -414,4 +414,5 @@ button:hover {
     .detail-item span:last-child {
         font-size: 11px;
     }
+
 }
