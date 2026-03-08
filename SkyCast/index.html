@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>SkyCast | Live Weather</title>
+
+    <!-- Skycons for animated icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌤 SkyCast</h1>
+
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name" />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <button id="locationBtn">Use My Location</button>
+
+      <!-- Loader -->
+      <div id="loader" class="loader">
+        <p id="loadingText">Loading...</p>
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state">
+        <p>📍 Search for a city or use your location to get started</p>
+      </div>
+
+      <!-- Main Weather Card -->
+      <div id="weatherCard" class="weather-card" style="display: none">
+        <h2 id="city"></h2>
+        <canvas id="icon" width="128" height="128"></canvas>
+        <h1 id="temp"></h1>
+        <p id="condition"></p>
+
+        <div class="weather-details">
+          <div class="detail-item">
+            <span class="label">Feels Like:</span>
+            <span id="feels"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Humidity:</span>
+            <span id="humidity"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Wind Speed:</span>
+            <span id="wind"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Wind Direction:</span>
+            <span id="windDir"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Pressure:</span>
+            <span id="pressure"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Visibility:</span>
+            <span id="visibility"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Sunrise:</span>
+            <span id="sunrise"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Sunset:</span>
+            <span id="sunset"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forecast Toggle Button -->
+      <button
+        id="forecastToggleBtn"
+        class="forecast-toggle-btn"
+        style="display: none"
+      >
+        📅 Show 5-Day Forecast
+      </button>
+
+      <!-- 5-day Forecast -->
+      <div
+        id="forecastContainer"
+        class="forecast-container"
+        style="display: none"
+      ></div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
